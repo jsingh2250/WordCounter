@@ -1,0 +1,1 @@
+This program is a command-line tool that counts the number of each word in a user-specified file. The result is stored in a separate file. The user should specify the filepath/filename as an argument when running the program.

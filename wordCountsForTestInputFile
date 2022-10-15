@@ -1,0 +1,5 @@
+These are the manually counted word counts for the test input file. Compare the program's results to these results to check the program for accuracy.
+
+Hello: 5
+World: 4
+java: 6
