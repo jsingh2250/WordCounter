@@ -161,11 +161,15 @@ public class WordCounter {
         while (!wordCounts.isEmpty()) {
             Map.Entry<String, Integer> wordCountsEntry = wordCounts.pollFirstEntry();
             fileWriter.write(wordCountsEntry.getKey() + ": " + wordCountsEntry.getValue() + "\n");
+            fileWriter.flush();
         }
+        // Close the file writer.
+        fileWriter.close();
 
         // Tell the user that the words and word counts were written to the file.
         printLnTextLn(
-                "The words from \"" + filename + "\" were counted and written to \"" + outputFilename + "\" with their associated word counts.");
+                "The words from \"" + filename + "\" were counted and written to \"" + outputFilename
+                        + "\" with their associated word counts.");
 
         // Close the scanners.
         fileScanner.close();
